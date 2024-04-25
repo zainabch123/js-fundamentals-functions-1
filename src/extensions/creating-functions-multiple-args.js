@@ -11,14 +11,14 @@
 // TODO: write code below
 
 function count(lower, upper) {
-  let result = [];
-  for (let i= lower; i<=upper; i++) {
-      result.push(i)
+  const result = []
+  for (let i = lower; i <= upper; i++) {
+    result.push(i)
   }
   return result
 }
 
-console.log(count(1,10));
+console.log(count(1, 10))
 
 // 2. define a function that takes two arguments: a string and a number.
 // The function should return the same string but in upper case with exclamation
@@ -32,17 +32,17 @@ console.log(count(1,10));
 //
 // TODO: write code below
 function transformString(string, number) {
-  let text = string.toUpperCase();
+  let text = string.toUpperCase()
   for (let i = 0; i < number; i++) {
-      text = text + '!'; 
-    }
+    text = text + '!'
+  }
 
-  return text;
+  return text
 }
 
-console.log( transformString("disaster", 2) )
-console.log( transformString("emergency", 5) )
-console.log( transformString("not too bad", 1) )
+console.log(transformString('disaster', 2))
+console.log(transformString('emergency', 5))
+console.log(transformString('not too bad', 1))
 
 // 3. define a function that takes two arguments: a string and a number.
 // The function should return the new time in 24hr time after adding the additional time in minutes.
@@ -57,14 +57,12 @@ console.log( transformString("not too bad", 1) )
 // TODO: write code below
 
 function newTime(string, number) {
-  let time = parseFloat(string);
-  console.log(time);
+  const time = parseFloat(string)
+  console.log(time)
 }
 
-newTime('12:40', 6); 
+newTime('12:40', 6)
 
-
-setInterval
 // TODO: change the exported value to be the name of the function you defined
 module.exports = {
   a: count, // 1. change undefined to be the name of the function defined to create the range of numbers (the first todo)
