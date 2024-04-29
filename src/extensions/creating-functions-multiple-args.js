@@ -57,11 +57,40 @@ console.log(transformString('not too bad', 1))
 // TODO: write code below
 
 function newTime(string, number) {
-  const time = parseFloat(string)
-  console.log(time)
+  let hms = string.split(':')
+  console.log(hms)
+  hours = parseInt(hms[0])
+  console.log(hours)
+  minutes = parseInt(hms[1])
+  console.log(minutes)
+  totalMinutes = minutes + number
+  console.log(totalMinutes)
+  minutesToHours = Math.floor(totalMinutes / 60)
+  console.log(minutesToHours)
+  let newHours = (hours + minutesToHours) % 24
+  console.log(newHours)
+  newMinutes = totalMinutes % 60
+  console.log(newMinutes)
+  convertMinutes = newMinutes / 100
+  console.log(convertMinutes)
+  totalTime = (newHours + convertMinutes).toFixed(2)
+  console.log(totalTime)
+  totalTime2 = totalTime.toString()
+  console.log(totalTime2)
+  let newhms = totalTime2.split('.')
+  console.log(newhms)
+  if (newhms[0] === '0') {
+    newhms[0] = '00'
+  } else {
+    newhms = newhms
+  }
+  console.log(newhms)
+  finalTime = newhms[0] + ':' + newhms[1]
+  console.log(finalTime)
+  return finalTime
 }
 
-newTime('12:40', 6)
+console.log(newTime('23:50', 30))
 
 // TODO: change the exported value to be the name of the function you defined
 module.exports = {
