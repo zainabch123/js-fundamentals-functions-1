@@ -57,35 +57,33 @@ console.log(transformString('not too bad', 1))
 // TODO: write code below
 
 function newTime(string, number) {
-  let hms = string.split(':')
+  const hms = string.split(':')
   console.log(hms)
-  hours = parseInt(hms[0])
+  const hours = parseInt(hms[0])
   console.log(hours)
-  minutes = parseInt(hms[1])
+  const minutes = parseInt(hms[1])
   console.log(minutes)
-  totalMinutes = minutes + number
+  const totalMinutes = minutes + number
   console.log(totalMinutes)
-  minutesToHours = Math.floor(totalMinutes / 60)
+  const minutesToHours = Math.floor(totalMinutes / 60)
   console.log(minutesToHours)
-  let newHours = (hours + minutesToHours) % 24
+  const newHours = (hours + minutesToHours) % 24
   console.log(newHours)
-  newMinutes = totalMinutes % 60
+  const newMinutes = totalMinutes % 60
   console.log(newMinutes)
-  convertMinutes = newMinutes / 100
+  const convertMinutes = newMinutes / 100
   console.log(convertMinutes)
-  totalTime = (newHours + convertMinutes).toFixed(2)
+  const totalTime = (newHours + convertMinutes).toFixed(2)
   console.log(totalTime)
-  totalTime2 = totalTime.toString()
+  const totalTime2 = totalTime.toString()
   console.log(totalTime2)
-  let newhms = totalTime2.split('.')
+  const newhms = totalTime2.split('.')
   console.log(newhms)
   if (newhms[0] === '0') {
     newhms[0] = '00'
-  } else {
-    newhms = newhms
   }
   console.log(newhms)
-  finalTime = newhms[0] + ':' + newhms[1]
+  const finalTime = newhms[0] + ':' + newhms[1]
   console.log(finalTime)
   return finalTime
 }
